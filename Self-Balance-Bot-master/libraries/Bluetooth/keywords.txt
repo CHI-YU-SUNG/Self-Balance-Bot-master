@@ -1,0 +1,11 @@
+Bluetooth	KEYWORD1
+
+Begin		KEYWORD2
+ReadString	KEYWORD2
+WriteString	KEYWORD2
+available	KEYWORD2
+CheckATMode	KEYWORD2
+setName		KEYWORD2
+setPinCode	KEYWORD2
+getName		KEYWORD2
+getPinCode	KEYWORD2

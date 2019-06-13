@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_bluetooth"
+            android:icon="@drawable/ic_bluetooth"
+            android:title="BlueTooth" />
+
+        <item
+            android:id="@+id/nav_joystick_control"
+            android:icon="@drawable/ic_joystick_control"
+            android:title="JoyStick Control" />
+
+        <item
+            android:id="@+id/nav_pid_control"
+            android:icon="@drawable/ic_pid_control"
+            android:title="PID Control" />
+
+        <item
+            android:id="@+id/nav_statefeedback_control"
+            android:icon="@drawable/ic_statefeedback_control"
+            android:title="State Feedback Control" />
+
+        <item
+            android:id="@+id/nav_car_state"
+            android:icon="@drawable/ic_car_state"
+            android:title="Car State" />
+
+        <item
+            android:id="@+id/nav_debug"
+            android:icon="@drawable/ic_car_state"
+            android:title="Debug" />
+    </group>
+
+
+</menu>

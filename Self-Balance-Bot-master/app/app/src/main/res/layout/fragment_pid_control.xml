@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_send_pid_inclination"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_reference">
+
+        <RadioButton
+            android:id="@+id/radioButton_psi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Psi" />
+
+        <RadioButton
+            android:id="@+id/radioButton_theta"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Theta" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_stop_pid_inclination"
+        android:layout_width="72dp"
+        android:layout_height="41dp"
+        android:text="STOP"
+        app:layout_constraintBottom_toBottomOf="@+id/button_send_pid_inclination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_send_pid_inclination" />
+
+    <Button
+        android:id="@+id/button_send_pid_inclination"
+        android:layout_width="72dp"
+        android:layout_height="41dp"
+        android:text="SEND"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup_controller"
+        app:layout_constraintEnd_toStartOf="@+id/button_stop_pid_inclination"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup_controller" />
+
+    <Button
+        android:id="@+id/button_inclination_kp_up"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_inclination_kp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText_inclination_kp" />
+
+    <Button
+        android:id="@+id/button_inclination_reference_up"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_inclination_reference"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_kd_up" />
+
+    <Button
+        android:id="@+id/button_inclination_kd_up"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_inclination_kd"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_ki_up" />
+
+    <Button
+        android:id="@+id/button_inclination_kp_down"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_kp"
+        app:layout_constraintEnd_toStartOf="@+id/editText_inclination_kp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_kp" />
+
+    <EditText
+        android:id="@+id/editText_inclination_kp"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button_inclination_kp_down"
+        app:layout_constraintEnd_toStartOf="@+id/button_inclination_kp_up"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_inclination_kp_down" />
+
+    <Button
+        android:id="@+id/button_inclination_kd_down"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_kd"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_ki_down" />
+
+    <Button
+        android:id="@+id/button_inclination_reference_down"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_reference"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_kd_down" />
+
+    <EditText
+        android:id="@+id/editText_inclination_reference"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button_inclination_reference_down"
+        app:layout_constraintStart_toStartOf="@+id/editText_inclination_kd" />
+
+    <EditText
+        android:id="@+id/editText_inclination_kd"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button_inclination_kd_down"
+        app:layout_constraintStart_toStartOf="@+id/editText_inclination_ki" />
+
+    <Button
+        android:id="@+id/button_inclination_ki_up"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_inclination_ki"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_kp_up" />
+
+    <Button
+        android:id="@+id/button_inclination_ki_down"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_ki"
+        app:layout_constraintStart_toStartOf="@+id/button_inclination_kp_down" />
+
+    <EditText
+        android:id="@+id/editText_inclination_ki"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button_inclination_ki_down"
+        app:layout_constraintStart_toStartOf="@+id/editText_inclination_kp" />
+
+    <TextView
+        android:id="@+id/textView_reference"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Reference"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_controller"
+        app:layout_constraintStart_toStartOf="@+id/textView_kd"
+        app:layout_constraintTop_toBottomOf="@+id/textView_kd" />
+
+    <TextView
+        android:id="@+id/textView_kp"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="KP"
+        app:layout_constraintBottom_toTopOf="@+id/textView_ki"
+        app:layout_constraintEnd_toStartOf="@+id/button_inclination_kp_down"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_motor" />
+
+    <TextView
+        android:id="@+id/textView_kd"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="KD"
+        app:layout_constraintBottom_toTopOf="@+id/textView_reference"
+        app:layout_constraintStart_toStartOf="@+id/textView_ki"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ki" />
+
+    <TextView
+        android:id="@+id/textView_ki"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="KI"
+        app:layout_constraintBottom_toTopOf="@+id/textView_kd"
+        app:layout_constraintStart_toStartOf="@+id/textView_kp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_kp" />
+
+    <TextView
+        android:id="@+id/textView_motor"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Motor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
