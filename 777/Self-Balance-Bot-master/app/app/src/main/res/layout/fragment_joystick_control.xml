@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jmedeisis.bugstick.Joystick
+        android:id="@+id/joystick_l"
+        android:layout_width="175dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/bg_base"
+        app:force_square="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:motion_constraint="Vertical"
+        app:start_on_first_touch="true">
+
+        <Button
+            android:layout_width="69dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_stick" />
+
+    </com.jmedeisis.bugstick.Joystick>
+
+    <TextView
+        android:id="@+id/y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="60dp"
+        android:text="Y: 0"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.jmedeisis.bugstick.Joystick
+        android:id="@+id/joystick_r"
+        android:layout_width="175dp"
+        android:layout_height="104dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/bg_base"
+        app:force_square="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:motion_constraint="Horizontal"
+        app:start_on_first_touch="true">
+
+        <Button
+            android:layout_width="69dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_stick" />
+
+    </com.jmedeisis.bugstick.Joystick>
+
+    <TextView
+        android:id="@+id/x_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="60dp"
+        android:text="0 :X"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

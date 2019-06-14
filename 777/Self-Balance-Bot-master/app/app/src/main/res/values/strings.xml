@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Self-Balance Bot Application</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="search">SEARCH</string>
+    <string name="_0">0</string>
+</resources>
