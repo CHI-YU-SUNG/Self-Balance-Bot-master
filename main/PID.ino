@@ -1,7 +1,7 @@
 //設定左右輪PID和左右馬達微調
 
 void PID(){
-      
+ 
     // update the current state
     psi = ((float)GetPsi())/180*PI;
     encoderA.Update(samplingTime);
@@ -20,7 +20,7 @@ void PID(){
     //Serial.print(" ");
     //Serial.println(thetaR);
  
-
+    
     
     // update the controller
     desire_psi = -posController.Update(y, samplingTime);
@@ -28,17 +28,19 @@ void PID(){
     output = -psiController.Update(psi, samplingTime);
     
     
-    // move the car
-    motorA.Rotate( output );
-    motorB.Rotate( output );
-
+    //move car 驅動馬達+微調馬達
+    OutputCalibration( 0 );    //output +微調不可以超過255    
 
     // record the previous time
     previousTime = currentTime;
 }
 
-float OutputCalibration(float IntiOutput){//微調
-
+float OutputCalibration(float Calibration){   //微調左右馬達
+    float outputA = output + TurnL ;
+    float outputB = output + Calibration + TurnR ;
+    // move the car
+    motorA.Rotate( outputA );
+    motorB.Rotate( outputB );
   
 }
 
