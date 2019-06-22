@@ -62,7 +62,7 @@ int TurnCount = 0;
 float TurnRight=90; // 向右轉0度
 float TurnLeft =0;  // 向左轉0度
 
-int level=1;
+int level=0;
 void setup(){
     
     Serial.begin(115200);
@@ -79,27 +79,43 @@ void setup(){
 
 // update controller
 void loop(){
+    
     switch(level){
-      case 6:
-          //Reference=10;
-          Addpsi(-20);//克服最大靜摩擦，增加車傾角
-          break;
-      case 5:
-          turn(1,90);
-          break;
-      case 2:
-          delay(9000);
-          break;
-      case 3:
-          turn(0,90);//向右轉90度 為(0,90)
+      case 0:
+          delay(2000);
           break;
       case 1:
-          curve(-10);
+          Addpsi(-75,12000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          break;
+      case 2:
+          turn(1,90);
+          //Addpsi(10,5000,1);//克服最大靜摩擦，增加車傾角
+          //delay(6000);
+          break;
+      case 3:
+          //Reference=10;
+          Addpsi(-35,15000,2);//克服最大靜摩擦，增加車傾角
+          break;
+      case 5:
+          turn(0,90);//向右轉90度 為(0,90)
+          break;
+      //case 7:
+        //  curve(-10);
+      case 4:
+          delay(5000);
+          break;
+      case 6:
+          delay(5000);
+          break;
           
       default: 
           break;
     }
-      level++;
+    if(level==6){
+        level=1;
+    }
+    else
+        level++;
      //Addpsi(-50);//克服最大靜摩擦，增加車傾角
      //turn(0,90);//向右轉90度 0,90
      //Reference=-30;
@@ -109,7 +125,7 @@ void loop(){
     //Serial.println(TurnL);
 
 
-    
+   
     
     
     

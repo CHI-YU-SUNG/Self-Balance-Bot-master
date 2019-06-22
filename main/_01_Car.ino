@@ -32,13 +32,13 @@ void SetupCar(){
     // psi controller
     psiController.SetSaturation(12.0, -12.0);  // 12v ~ -12v
     psiController.SetToleratedError(0.02);     // 0.02rad
-    psiController.SetPID(30, 85, 0.6);      // KP, KI, KD  30, 150, 0.6        //20,75,0.6
+    psiController.SetPID(40, 105, 0.6);      // KP, KI, KD  30, 150, 0.6        //20,75,0.6
     psiController.SetReference(-0.02);           // Reference-0.02
 
     // pos Controller
-    posController.SetSaturation(0.02, -0.02);  // 0.02 ~ -0.02rad
+    posController.SetSaturation(0.01, -0.01);  // 0.02 ~ -0.02rad
     posController.SetToleratedError(5);        // 5cm
-    posController.SetPID(0.001, 0.0, 0);            // KP, KI, KD  0.001, 0.2 ,0
+    posController.SetPID(0.01, 0, 0.1);            // KP, KI, KD  0.001, 0.2 ,0
     posController.SetReference(Reference);           // Reference
 }
 
