@@ -23,7 +23,7 @@ void PID(){
     
     
     // update the controller
-    desire_psi = -posController.Update(y, samplingTime);
+    desire_psi = -(posController.Update(y, samplingTime)+ReferencePsi);
     psiController.SetReference(desire_psi);
     output = -psiController.Update(psi, samplingTime);
     
@@ -43,4 +43,3 @@ float OutputCalibration(float Calibration){   //微調左右馬達
     motorB.Rotate( outputB );
   
 }
-

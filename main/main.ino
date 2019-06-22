@@ -53,6 +53,7 @@ bool SaturationAdd = false;
 
 //set saturation
 float Reference = 0;       //移動距離(負的定為往前)
+float ReferencePsi = 0; 
 int satcount= 0;
 
 //set turn 
@@ -79,18 +80,19 @@ void setup(){
 
 // update controller
 void loop(){
-    
+       
     switch(level){
       case 0:
           delay(2000);
           break;
-      case 1:
-          Addpsi(-100,15000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
-          break;
+ //     case 1:
+ //         Addpsi(-100,15000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
+ //         break;
       case 2:
           turn(1,90);
+          
           //Addpsi(10,5000,1);//克服最大靜摩擦，增加車傾角
-          //delay(6000);
+          delay(6000);
           break;
       case 3:
           //Reference=10;
@@ -99,8 +101,10 @@ void loop(){
       case 5:
           turn(1,90);//向轉90度 為(0,90)
           break;
-      //case 7:
-        //  curve(-10);
+      case 1:
+          curve(-100);
+          delay(5000);
+          break;
       case 4:
           delay(5000);
           break;

@@ -17,6 +17,9 @@ void SetupMsTimer(){
 void TimerInterrupt(){
     sei();
     PID();
+//    Serial.print(thetaL);
+ //    Serial.print(" ");
+       Serial.println(ReferencePsi);
 
 }
 
