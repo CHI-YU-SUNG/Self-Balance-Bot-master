@@ -38,7 +38,7 @@ void SetupCar(){
     // pos Controller
     posController.SetSaturation(0.01, -0.01);  // 0.02 ~ -0.02rad
     posController.SetToleratedError(5);        // 5cm
-    posController.SetPID(0.01, 0, 0.1);            // KP, KI, KD  0.001, 0.2 ,0
+    posController.SetPID(0.1, 0.2, 0.01);            // KP, KI, KD  0.001, 0.2 ,0
     posController.SetReference(Reference);           // Reference
 }
 

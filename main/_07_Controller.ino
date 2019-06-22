@@ -3,25 +3,25 @@
 void Addpsi(float distance, float wait, float flag){//克服最大靜摩擦
     posController.SetReference(distance);           // Reference
     //while(distance != 0){  
-      //bool done=false;
-      if(flag==1){
-          for(int i=0;i<10;i++){
-          posController.SetSaturation(0.01, -0.01);
-          delay(1);
+      bool done=false;
+      //do{
+          if(flag==1){
+              for(int i=0;i<10;i++){
+              posController.SetSaturation(0.01, -0.01);
+              delay(1);
+           }
+          }else if(flag ==2){
+              for(int i=0;i<20;i++){
+              posController.SetSaturation(0.03, -0.03);
+              delay(1);
+              }
           }
-      }else if(flag ==2){
-          for(int i=0;i<20;i++){
-          posController.SetSaturation(0.04, -0.04);
-          delay(1);
-          }
-      }
       
-      posController.SetSaturation(0.01, -0.01);  
-      //do{  
-      //if (y-distance<10)
-          //done=true;
-      //}while(!done);
-      delay(wait);//等車子到位再下一個動作
+          posController.SetSaturation(0.01, -0.01);  
+       //   if (abs(y-distance)<10)
+         //     done=true;
+         // }while(!done);
+          delay(wait);//等車子到位再下一個動作
     //}
 
 }
@@ -61,8 +61,8 @@ void turn(int direct,float angle){
             }
             */
             if (direct==1 && angle==90){//右轉90
-            for(int i=0;i<420;i++){
-                if(i ==420){
+            for(int i=0;i<360;i++){
+                if(i ==360){
                     TurnR =0;
                     TurnL =1;
                     posController.SetSaturation(0.02, -0.02);

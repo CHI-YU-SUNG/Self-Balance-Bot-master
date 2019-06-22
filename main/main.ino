@@ -85,7 +85,7 @@ void loop(){
           delay(2000);
           break;
       case 1:
-          Addpsi(-75,12000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          Addpsi(-100,15000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
           break;
       case 2:
           turn(1,90);
@@ -97,7 +97,7 @@ void loop(){
           Addpsi(-35,15000,2);//克服最大靜摩擦，增加車傾角
           break;
       case 5:
-          turn(0,90);//向右轉90度 為(0,90)
+          turn(1,90);//向轉90度 為(0,90)
           break;
       //case 7:
         //  curve(-10);
