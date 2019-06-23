@@ -10,7 +10,7 @@ void Addpsi(float distance, float wait, float flag) { //克服最大靜摩擦
   //do{
   if (flag == 1) {
     for (int i = 0; i < 10; i++) {
-      posController.SetSaturation(0.03, -0.03);
+      posController.SetSaturation(0.03, -0.035);
       delay(1);
     }
     posController.SetSaturation(0.01, -0.01);
@@ -57,7 +57,7 @@ void turn(int direct, float angle , float flag) {
     posController.SetReference(0);
     posController.SetSaturation(0.025, -0.025);
     for (int i = 0; i < 520; i++) {
-      if (i == 360) {
+      if (i >= 400) {
         TurnR = 1;
         TurnL = 0;
 
@@ -79,13 +79,13 @@ void turn(int direct, float angle , float flag) {
       posController.SetPID(0, 0, 0);
       posController.SetReference(0);
       posController.SetSaturation(0.025, -0.025);
-      for (int i = 0; i < 395; i++) {
-        if (i == 360) {
-          TurnR = 0;
+      for (int i = 0; i < 205; i++) {
+        if (i == 205) {
+          TurnR = -1;
           TurnL = 1;
 
         } else {
-          TurnR = 0;
+          TurnR = -1;
           TurnL = 1;
           delay(5);
         }
@@ -98,14 +98,14 @@ void turn(int direct, float angle , float flag) {
     if (flag == 2) {
       posController.SetPID(0, 0, 0);
       posController.SetReference(0);
-      posController.SetSaturation(0.025, -0.025);
-      for (int i = 0; i < 370; i++) {
-        if (i == 360) {
-          TurnR = 0;
+      posController.SetSaturation(0.027, -0.027);
+      for (int i = 0; i < 210; i++) {
+        if (i == 200) {
+          TurnR = -1;
           TurnL = 1;
 
         } else {
-          TurnR = 0;
+          TurnR = -1;
           TurnL = 1;
           delay(5);
         }
