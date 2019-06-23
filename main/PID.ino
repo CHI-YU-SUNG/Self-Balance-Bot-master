@@ -37,7 +37,7 @@ void PID(){
 
 float OutputCalibration(float Calibration){   //微調左右馬達
     float outputA = output + TurnL ;
-    float outputB = output + Calibration + TurnR ;
+    float outputB = output + Calibration+TurnR ;
     // move the car
     motorA.Rotate( outputA );
     motorB.Rotate( outputB );

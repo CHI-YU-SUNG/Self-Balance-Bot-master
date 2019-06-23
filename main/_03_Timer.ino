@@ -25,6 +25,7 @@ void TimerInterrupt(){
 
 // start: "~"
 // end: "#"
+
 void ReceiveData(){
     while(BTSerial.available()){
         char c = BTSerial.read();
