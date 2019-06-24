@@ -63,6 +63,8 @@ float TurnL =0.0;
 int TurnCount = 0;
 float TurnRight=90; // 向右轉0度
 float TurnLeft =0;  // 向左轉0度
+//calculate time
+float timercount =0;
 
 int level=0;
 void setup(){
@@ -88,16 +90,18 @@ void loop(){
           break;
       
       case 1:
+          y=0;timercount=0;
           Calibration=-0.1;
-          Addpsi(-65,9000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          Addpsi(-60,8000,1);//克服最大靜摩擦，增加車傾角,//ms,//flag       
           break;
       case 2:
           turn(1,90,1);
-          delay(2000);
+          delay(1000);
           break;
       case 3:
-          Calibration=-0.15;
-          Addpsi(-60,14000,2);//克服最大靜摩擦，增加車傾角
+          y=0;timercount=0;
+  //        Calibration=-0.15;
+          Addpsi(-85,10000,2);//克服最大靜摩擦，增加車傾角
           break;
       case 4:
           turn(1,90,2);//向轉90度 為(0,90)
@@ -105,7 +109,7 @@ void loop(){
           break;
       case 5:
           Calibration=-0.15;
-          Addpsi(-80,15000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          Addpsi(-60,15000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
           break;
       case 6:
           turn(0,180,1);//向右轉90度 為(0,90)
@@ -117,10 +121,10 @@ void loop(){
           //Calibration=-0.1;
           Addpsi(-15,3000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
           turn(0,5,1);
-          Addpsi(-20,2000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
-          turn(0,5,1);
+          Addpsi(-20,4000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          turn(0,15,1);
           
-          Addpsi(-20,2000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
+          Addpsi(-20,4000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
           turn(0,5,1);
           Addpsi(-20,3000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
           turn(0,5,1);
@@ -158,15 +162,9 @@ void loop(){
     }
     else
         level++;
-     //Addpsi(-50);//克服最大靜摩擦，增加車傾角
-     //turn(0,90);//向右轉90度 0,90
-     //Reference=-30;
-     //posController.SetReference(-30);           // Reference
-     //Addpsi(Reference);//克服最大靜摩擦，增加車傾角
-    //Serial.println(TurnR);
-    //Serial.println(TurnL);
+    
 
-
+    
    
     
     

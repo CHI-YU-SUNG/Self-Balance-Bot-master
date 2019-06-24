@@ -8,24 +8,29 @@ void Addpsi(float distance, float wait, float flag) { //克服最大靜摩擦
   bool done = false;
   //do{
   if (flag == 1) {
+
     for (int i = 0; i < 10; i++) {
-      posController.SetSaturation(0.03, -0.03);
+      posController.SetSaturation(0.03, -0.035);
       delay(1);
     }
+    posController.SetSaturation(0.01, -0.01);
+    //for (int i = 0; i < 10; i++) {
+    //posController.SetSaturation(0.03, -0.03);
+    //delay(1);
   } else if (flag == 2) {
-    for (int i = 0; i < 20; i++) {
-      posController.SetSaturation(0.03, -0.03);
-      delay(1);
-    }
+  for (int i = 0; i < 20; i++) {
+    posController.SetSaturation(0.03, -0.03);
+    delay(1);
   }
+}
 
-  posController.SetSaturation(0.01, -0.01);
-  //   if (abs(y-distance)<10)
-  //     done=true;
-  // }while(!done);
-  delay(wait);//等車子到位再下一個動作
+posController.SetSaturation(0.01, -0.01);
+//   if (abs(y-distance)<10)
+//     done=true;
+// }while(!done);
+delay(wait);//等車子到位再下一個動作
 
-  //}
+//}
 
 }
 
@@ -106,7 +111,7 @@ void curve(float distance) {
   posController.SetReference(0);
   //   posController.SetReference(distance);           // Reference
   //do{//調整曲度
-  
+
   for (int i = 0; i < 100; i++) {
     if (i <= 5) {
       TurnR = 1;
