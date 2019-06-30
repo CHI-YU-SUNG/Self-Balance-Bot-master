@@ -115,8 +115,6 @@ void loop(){
           turn(0,180,1);//向右轉90度 為(0,90)
           delay(3000);   
           break;
-      
-
       case 7:
           //Calibration=-0.1;
           Addpsi(-15,3000,3);//克服最大靜摩擦，增加車傾角,//ms,//flag
