@@ -38,5 +38,5 @@ control the trajectory of the robot.
 ## Product
  Your support will let me be better
 ## video
-* You will see in my youtube channel later
- Edit by CHI-YU-SUNG
+You will see in my youtube channel later. 
+* Edit by CHI-YU-SUNG
