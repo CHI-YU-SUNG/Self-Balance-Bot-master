@@ -1,5 +1,5 @@
 # Self-Balance-Bot-master(雙輪平衡車)
-  Edit by CHI-YU-SUNG
+
 ## Introduction
 This projects purpose was to design and build a two wheeled upright robot.A two-wheeled
 differential drive mobile robot based on the inverted pendulum model is built as a platform
@@ -39,4 +39,4 @@ control the trajectory of the robot.
  Your support will let me be better
 ## video
 You will see in my youtube channel later. 
-* Edit by CHI-YU-SUNG
+
