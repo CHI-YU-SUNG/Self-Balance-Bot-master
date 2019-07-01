@@ -14,10 +14,19 @@ system while the Pole placement requires the poles of the system to be placed to
 stability. As the robot will be moving about on a surface, a PID controller is implemented to
 control the trajectory of the robot.
 ### Hardware
+
+1. Accelerometer: 
+2. Main Controller:Arduino nano
+3. Motor Driver:
+4. DC Motors: 
+5. Wheels:
+6. Rotary Encodrs: 
+
 * System Mechanical Structure----------------------------------------------------------------------------------------
 ![](https://i.imgur.com/g31t4Qn.jpg)
 * System Structure---------------------------------------------------------------------------------------------------
 ![](https://i.imgur.com/oQ0a6CK.png)
+
 ### Function
 ### Simulation
 ### Product
