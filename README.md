@@ -22,13 +22,19 @@ control the trajectory of the robot.
 5. Wheels:
 6. Rotary Encodrs: 
 
-* System Mechanical Structure----------------------------------------------------------------------------------------
+### System Mechanical Structure
 ![](https://i.imgur.com/g31t4Qn.jpg)
-* System Structure---------------------------------------------------------------------------------------------------
+### System Structure
 ![](https://i.imgur.com/oQ0a6CK.png)
 
 ## Function
+* Position contol
+* Speed control
+* Image recognition
 ## Simulation
 ### matlab
+* ID:
+* Simulink :
 ## Product
+ Your support will let me be better
 ## video  
