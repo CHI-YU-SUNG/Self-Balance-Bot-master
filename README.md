@@ -1,7 +1,8 @@
-## Self-Balance-Bot-master雙輪平衡車
-### 介紹
-### 硬體架構
-### 功能
-### 模擬
-### 作品呈現
-### DEMO 影片
+## Self-Balance-Bot-master(雙輪平衡車)
+This pro jects purp ose was to design and build a two wheeled upright rob ot
+### Intriduction
+### Hardware
+### Function
+### Simulation
+### Product
+### video  
