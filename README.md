@@ -1,6 +1,6 @@
-## Self-Balance-Bot-master(雙輪平衡車)
+# Self-Balance-Bot-master(雙輪平衡車)
   
-### Introduction
+## Introduction
 This projects purpose was to design and build a two wheeled upright robot.A two-wheeled
 differential drive mobile robot based on the inverted pendulum model is built as a platform
 to investigate the use of a Kalman filter to estimate the tilt angle. As the robot is
@@ -13,7 +13,7 @@ uses several weighting matrix to obtain the appropriate control force to be appl
 system while the Pole placement requires the poles of the system to be placed to guarantee
 stability. As the robot will be moving about on a surface, a PID controller is implemented to
 control the trajectory of the robot.
-### Hardware
+## Hardware
 
 1. Accelerometer: 
 2. Main Controller:Arduino nano
@@ -27,8 +27,8 @@ control the trajectory of the robot.
 * System Structure---------------------------------------------------------------------------------------------------
 ![](https://i.imgur.com/oQ0a6CK.png)
 
-### Function
-### Simulation
-# matlab
-### Product
-### video  
+## Function
+## Simulation
+### matlab
+## Product
+## video  
