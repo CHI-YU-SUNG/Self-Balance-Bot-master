@@ -32,7 +32,7 @@ control the trajectory of the robot.
 * Speed control
 * Image recognition
 ## Simulation
-### matlab
+### matlab Modeling and Model Verification
 * ID :
 First of all, I collect some system data including "**Angle of car inclination**" and "**Wheel angle**". Base on LST(method of least-squares) method to derive the formula of dynamics equation, then compete the system's transfer function by matlab.
 * Simulink : Cascade form and Parralled form to simulate which condition of PID would keep satble status.  
